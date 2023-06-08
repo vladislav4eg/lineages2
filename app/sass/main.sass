@@ -1,0 +1,1116 @@
+@import "libs"
+@import "base"
+
+
+.text-right
+	text-align: right
+
+.bunner
+	position: absolute
+	width: 100%
+	left: 0
+	right: 0
+
+	&--top
+		top: 0
+
+		img
+			width: 100%
+			height: auto
+
+	&--bottom
+		bottom: 0
+
+
+.container
+	width: 100%
+	max-width: 1500px
+	padding: 0 15px
+	margin: 0 auto
+
+	+r(1500)
+		max-width: 1200px
+
+	+r(1200)
+		max-width: 992px
+	
+	+r(992)
+		max-width: 767px
+	
+	+r(767)
+		max-width: 576px
+	
+	+r(576)
+		max-width: 100%
+
+
+.header
+	margin-bottom: 10px
+	margin-top: 265px
+	z-index: 3
+
+	+r(767)
+		margin-top: 200px
+
+	+r(576)
+		margin-top: 150px
+
+	+r(480)
+		margin-top: 105px
+
+	&__container
+		+between
+		position: relative
+		background-color: $bg
+		background-image: url(../img/fon1.png)
+		padding: 15px 20px
+		border-radius: 3px
+
+		+r(1500)
+			padding: 10px
+	
+	.container
+		+r(480)
+			padding: 0
+
+	&__wrap
+		+between
+
+	&__logo
+		position: relative
+		width: 100px
+		margin-right: 25px
+		z-index: 1
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 60px
+			height: 30px
+			background-color: #ff9300
+			z-index: -1
+			opacity: .1
+			box-shadow: 0 0 50px 50px #ff9300
+			z-index: 1
+
+		+r(1500)
+			margin-right: 15px
+		
+		+r(1200)
+			width: 80px
+		
+		+r(992)
+			margin-bottom: 10px
+		
+		+r(480)
+			width: 45px
+			margin-right: 5px
+
+		img
+			width: 100%
+			height: auto
+
+	h1
+		font-size: 24px
+		text-transform: uppercase
+		letter-spacing: 1.5px
+		margin-right: 55px
+
+		+r(1500)
+			margin-right: 15px
+			font-size: 20px
+		
+		+r(1200)
+			font-size: 16px
+		
+		+r(992)
+			width: 70%
+			margin-bottom: 10px
+		
+		+r(576)
+			width: 83%
+
+		+r(480)
+			font-size: 14px
+			margin-right: 0
+			letter-spacing: 0
+
+	&__lang
+		+between
+
+		+r(1200)
+			position: absolute
+			right: 0
+			bottom: 120%
+
+		+r(480)
+			right: 15px
+
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			width: 30px
+			height: 30px
+			opacity: 0.6
+			margin-right: 12px
+
+			&:last-child
+				margin-right: 0
+
+			+r(578)
+				width: 20px
+				height: 20px
+
+		img
+			width: 100%
+			height: 100%
+			border-radius: 50%
+		
+		&_active
+			opacity: 1 !important
+
+	&__button
+		display: none
+		justify-content: center
+		padding-top: 10px
+		width: 100%
+
+		+r(992)
+			display: flex
+
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			background-color: #424446
+			box-shadow: 0 0 3px 0 rgba(#000, .5)
+			height: 30px
+			width: 300px
+			color: #ffffff
+			text-transform: uppercase
+			font-size: 12px
+		
+		img
+			margin-right: 5px
+
+	.dropdown
+		margin-right: 20px
+
+		+r(992)
+			width: 32%
+			margin-right: 1%
+
+			.btn
+				width: 100%
+
+		&:last-child
+			margin-right: 0
+
+		&-menu
+			background-color: #434447
+			max-height: 250px
+			overflow: auto
+
+		a
+			color: #ffffff
+
+			&:hover,
+			&:focus
+				color: $bg
+
+
+.main
+	z-index: 1
+
+	&__container
+		+between
+		align-items: flex-start
+	
+		+r(480)
+			padding: 0
+
+	&__content
+		width: 79%
+
+		+r(1500)
+			width: 74%
+		
+		+r(992)
+			width: 100%
+
+		&_green
+			color: #00ad5d
+		
+		&_gray
+			color: #7c7c7c
+
+	.gray
+		color: #7c7c7c
+
+	.green
+		color: #00ad5d
+
+	&__table
+		width: 49%
+		border-spacing: 0 5px
+		border-collapse: inherit
+
+		+r(1500)
+			+last
+			width: 100%
+			margin-bottom: 10px
+
+		&_header
+			display: flex
+			align-items: center
+			text-transform: uppercase
+			font-weight: 600
+			padding: 10px 8px
+			background-color: rgba(#fff, .09) !important
+			font-size: 16px
+			margin-bottom: 10px
+
+			+r(1500)
+				padding: 5px
+
+			b
+				color: #ff9300
+				margin-right: 5px
+			
+			img
+				margin-right: 5px
+				margin-top: -2px
+
+		&_item
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 100%
+			height: 40px
+			background-color: #28292b
+			border-radius: 3px
+			margin-bottom: 5px
+			line-height: 1
+			color: #ffffff
+			box-shadow: 0 3px 3px 0 rgba(#000, .4)
+			padding: 5px 8px
+
+			+r(1500)
+				padding: 5px
+
+			+r(576)
+				display: grid
+				height: 45px
+				padding: 3px
+				
+				
+
+			&:hover
+				p
+					text-decoration: underline
+
+			img
+				margin-top: -2px
+		
+			div
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 95px
+				
+				+r(576)
+					grid-row: 1 / 4
+					grid-column: 4 / 5
+					flex-direction: row-reverse
+
+				a
+					+cover
+					position: relative
+					width: 25px
+					height: 17px
+					margin-right: 5px
+					flex-shrink: 0
+
+				.data
+
+					&:hover,
+					&:focus
+						&::before,
+						&::after
+							display: block
+
+					&::before
+						content: attr(data-text)
+						display: none
+						position: absolute
+						bottom: 150%
+						left: 50%
+						transform: translate(-50%, 0)
+						width: 160px
+						background-color: #4e4f51
+						z-index: 1
+						border-radius: 3px
+						padding: 10px
+						color: #ffffff
+						font-size: 12px
+						text-transform: none
+
+					&::after
+						content: ''
+						position: absolute
+						top: -12px
+						left: 50%
+						transform: translate(-50%, 0)
+						border-bottom: 10px solid transparent
+						border-left: 10px solid transparent
+						border-right: 10px solid transparent
+						border-top: 10px solid #4e4f51
+						display: none
+
+				.boock
+					background-image: url(../img/icon__boock.png)
+
+				.lang
+					background-image: url(../img/icon__lang.png)
+
+				.bonus
+					background-image: url(../img/icon__bonus.png)
+					width: 22px !important
+					height: 22px !important
+
+		a
+			text-transform: uppercase
+			width: 40%
+			flex-shrink: 0
+			color: #ffffff
+
+			&:hover,
+			&:focus
+				text-decoration: underline
+
+			+r(576)
+				grid-row: 1 / 3
+				grid-column: 1 / 5
+				width: auto
+
+		strong
+			+r(576)
+				grid-row: 1 / 5
+				grid-column: 2 / 5
+
+		span
+			font-size: 12px
+			width: 55px
+			white-space: nowrap
+			flex-shrink: 0
+
+			&.color
+				+r(576)
+					grid-row: 3 / 4
+					grid-column: 3 / 4
+				
+			&.text-right
+				+r(576)
+					grid-row: 3 / 4
+					grid-column: 2 / 3
+
+		.color
+			color: #f1e1c5 !important
+
+		time
+			display: block
+			text-align: right
+			color: #ffffff
+			font-size: 12px
+			width: 60px
+			flex-shrink: 0
+
+			+r(576)
+				text-align: left
+				grid-row: 3 / 4
+				grid-column: 1 / 2
+
+		&_accent
+			color: $accent !important
+
+	&__wrap
+		+last
+		+between
+		background-image: url(../img/fon1.png)
+		align-items: flex-start
+		background-color: #2c2d30
+		padding: 10px
+		margin-bottom: 10px
+		border-radius: 3px
+
+		+r(1500)
+			padding: 5px
+
+		tr:last-child
+			td
+				border: none
+
+		&--two
+			.main__table_item
+				box-shadow: 0 3px 3px 0 rgba(#000, 0)
+				background-color: transparent
+				border-bottom: 1px solid #1f2020
+
+				&:last-child
+					border: none
+
+	&__nav
+		width: 20%
+
+		+r(1500)
+			width: 25%
+		
+		+r(992)
+			display: none
+
+		&_wrap
+			+last
+			background-color: #2b2c2f
+			padding: 10px
+			margin-bottom: 10px
+			background-image: url(../img/fon1.png)
+
+		&_form
+
+		&_select
+			display: flex
+			justify-content: space-between
+			margin-bottom: 10px
+
+			select
+				width: 47%
+
+		&_btn
+			border: 1px solid #ff9300
+			width: 200px
+			color: #ff9300
+			margin: 0 auto 20px
+
+			&:hover,
+			&:focus
+				border: 1px solid #ff9300
+				color: $bg
+				background-color: #ff9300 !important
+
+		&_radio
+			+last
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+			margin-bottom: 15px
+
+			div
+				width: 30%
+
+			label
+				+transition
+				position: relative
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 35px
+				color: #fff
+				cursor: pointer
+				margin-bottom: 0
+				margin-right: 0
+				background-color: #424245
+				font-size: 12px
+				border-radius: 3px
+				box-shadow: 0 0 3px 0 rgba(#000, .6)
+				margin-bottom: 10px
+				font-weight: 600
+
+				&:hover,
+				&:focus
+					background-color: #57585a
+
+			input[type="checkbox"]
+				display: none
+
+			input[type="checkbox"]:checked + label
+				background-color: $accent
+				color: $bg
+
+		&_bunner
+			display: block
+			border-radius: 3px
+			padding: 3px
+
+			img
+				width: 100%
+
+		&_time
+
+			p
+				text-align: center
+				background-color: #333536
+				margin-bottom: 10px
+				padding: 10px
+				text-transform: uppercase
+				border-radius: 3px
+				font-weight: 700
+
+	&__bunner
+		display: none
+
+		+r(992)
+			display: block
+			max-width: 320px
+			margin: 0 auto 10px
+		
+		+r(350)
+			margin: 5px
+
+
+.datepicker
+	width: 100%
+	background-color: transparent
+	border-color: transparent !important
+	font-size: 14px
+
+	&--cell.-current-
+		color: #ff9300
+
+	&--cell
+		color: #ffffff
+		background-color: #303134
+		border: 2px solid #2c2d30
+		height: 36px
+
+		&:hover,
+		&:focus,
+		&:active
+			color: $bg
+			background-color: #ff9300
+
+	.my-class
+		background-color: #3b3c3d
+		color: #ff9300
+
+	&--nav
+		border: 1px solid transparent
+		border-bottom: 1px solid #000
+
+		&-title
+			+transition
+			color: #ff9300
+			text-transform: uppercase
+			font-weight: 600
+
+			&:hover
+				color: $bg
+
+				i
+					color: $bg
+
+			i
+				color: #ff9300
+				+transition
+		
+	&--day-name
+		color: #ffffff
+
+
+	&--cell-day.-other-month-,
+	&--cell-year.-other-decade-
+		color: #7c7c7c
+
+	.-selected-,
+	.-selected-.-current-
+		background-color: #ff9300
+		color: #ffffff
+
+.info
+	padding-top: 70px
+	padding-bottom: 60px
+	z-index: 1
+
+	+r(767)
+		padding: 40px 0
+	
+	+r(480)
+		padding: 20px 0
+
+	h2
+		text-transform: uppercase
+		margin-bottom: 15px
+		color: #dcdcdc
+		font-size: 20px
+
+		+r(767)
+			font-size: 16px
+
+		+r(480)
+			font-size: 12px
+			margin-bottom: 10px
+	
+	p
+		+last
+		font-weight: 600
+		font-size: 12px
+		color: #a2a2a2
+		margin-bottom: 15px
+
+		+r(480)
+			margin-bottom: 10px
+
+
+.reviews
+	z-index: 1
+
+	h2
+		font-size: 22px
+		margin-bottom: 15px
+
+		+r(576)
+			padding: 10px 5px 0 10px
+
+	&__content
+		background-color: $bg
+		background-image: url(../img/fon2.png)
+		border-radius: 3px
+		padding: 25px
+
+		+r(1200)
+			padding: 15px
+		
+		+r(576)
+			padding: 0
+
+	&__server
+		display: grid
+		grid-template-columns: 1fr 5fr
+		background-color: #2a2b2d
+		background-image: url(../img/fon3.png)
+		margin-bottom: 20px
+		box-shadow: 0 3px 2px 0 rgba(#000, .5)
+		padding: 20px
+		border-radius: 3px
+
+		+r(1200)
+			padding: 10px
+
+		+r(578)
+			.button
+				margin: 0 auto
+				grid-column: 1 / 3
+
+		&_img
+			width: 200px
+			height: 200px
+			border-radius: 3px
+			margin-right: 15px
+			grid-row: 1 / 5
+
+			+r(1500)
+				width: 150px
+				height: 150px
+			
+			+r(1200)
+				width: 120px
+				height: 120px
+			
+			+r(767)
+				width: 100px
+				height: 100px
+
+			+r(576)
+				margin-bottom: 15px
+				grid-row: 1 / 4
+
+		p
+			font-size: 14px
+			margin-bottom: 15px
+
+			+r(576)
+				grid-column: 1 / 3
+
+		&_title
+			font-size: 24px
+			color: #ebdac3
+			text-transform: uppercase
+			font-weight: 600
+			margin-bottom: 10px
+
+			+r(992)
+				font-size: 20px
+			
+			+r(767)
+				font-size: 18px
+
+			+r(576)
+				order: -1
+
+		&_star
+			display: flex
+			align-items: center
+			width: 100%
+			margin-bottom: 30px
+			color: #aeaeae
+			font-size: 14px
+			line-height: 1
+
+			+r(1200)
+				margin-bottom: 15px
+				align-items: start
+
+			+r(576)
+				order: -1
+				margin-bottom: 5px
+			
+			+r(480)
+				font-size: 12px
+				
+
+
+			img
+				margin-right: 3px
+
+				+r(480)
+					width: 12px
+
+			span
+				margin-left: 5px
+
+	&__comments
+		background-color: #38393c
+		background-image: url(../img/fon4.png)
+		padding: 20px
+		border-radius: 3px
+		box-shadow: 0 3px 3px 0 rgba(#000, .5)
+	
+		h3
+			color: #ff9300
+			font-size: 20px
+			font-weight: 400
+			margin-right: 10px
+
+			+r(576)
+				font-size: 16px
+			
+			+r(480)
+				font-size: 14px
+		
+		p
+			+last
+			margin-bottom: 5px
+			font-size: 14px
+
+			+r(576)
+				margin-bottom: 2px
+		
+		b
+			color: #aeaeae
+
+		&_item
+			border-bottom: 1px solid #292a2b
+			padding-bottom: 15px
+			margin-bottom: 15px
+
+		&_header
+			display: flex
+			align-items: center
+			color: #aeaeae
+			margin-bottom: 10px
+			font-size: 14px
+
+			+r(576)
+				font-size: 12px
+				margin-bottom: 5px
+
+			+r(480)
+				font-size: 10px
+
+		&_pluse
+			b
+				color: #00ad5d
+
+		&_minus
+			margin-top: 15px
+
+			b
+				color: #f24841
+
+		&_comment
+			margin-top: 15px
+
+	&__btn
+		display: flex
+		justify-content: center
+
+
+.filter
+	z-index: 1
+
+	h3
+		font-size: 22px
+		margin-bottom: 10px
+
+		+r(767)
+			font-size: 18px
+			margin-bottom: 5px
+		
+		+r(576)
+			font-size: 16px
+			padding: 10px 10px 0 10px
+
+	p
+		font-size: 14px
+		margin-bottom: 15px
+
+		+r(767)
+			margin-bottom: 10px
+
+		+r(576)
+			margin-bottom: 5px
+			padding: 0 10px
+
+	&__content
+		+r(992)
+			margin-bottom: 10px
+
+	&__form
+		background-color: #2a2b2d
+		background-image: url(../img/fon3.png)
+		padding: 15px
+		text-align: center
+		margin-bottom: 10px !important
+		box-shadow: 0 3px 3px 0 rgba(#000, .5)
+
+		p
+			font-size: 20px
+			color: #ebdac3
+
+			+r(767)
+				font-size: 18px
+				margin-bottom: 15px !important
+
+			+r(576)
+				font-size: 14px
+
+	&__wrap
+		max-width: 500px
+		margin: 0 auto
+		justify-content: space-around
+
+		div
+			margin-right: 0
+
+		label
+			height: 45px
+			font-size: 18px
+			background-color: #545556
+			color: #f1e1c5
+
+			&:hover,
+			&:focus
+				background-color: #909091
+
+			+r(767)
+				height: 35px
+				font-size: 16px
+			
+			+r(480)
+				height: 25px
+				font-size: 12px
+
+
+.download
+	z-index: 1
+
+	h3
+		font-size: 22px
+		margin-bottom: 10px
+
+		+r(992)
+			font-size: 18px
+	
+	&__subtitle
+		margin-bottom: 10px
+
+	&__content
+		background-color: $bg
+		background-image: url(../img/fon2.png)
+		border-radius: 3px
+		padding: 25px
+		margin-bottom: 25px
+
+		+r(1200)
+			padding: 15px
+		
+		+r(576)
+			padding: 0
+
+	&__item
+		display: grid
+		grid-template-columns: 1fr 5fr
+		background-color: #2a2b2d
+		background-image: url(../img/fon3.png)
+		box-shadow: 0 3px 3px 0 rgba(#000, .5)
+		border-radius: 3px
+		padding: 10px
+		margin-bottom: 12px
+
+		&_img
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 3px
+			width: 210px
+			height: 130px
+			margin-right: 15px
+			grid-row: 1 / 5
+			background-color: #dcdcdc
+
+			+r(992)
+				width: 170px
+				height: 90px
+				margin-right: 10px
+			
+			+r(480)
+				grid-row: 1 / 1
+				grid-column: 1 / 7
+				width: 100%
+				margin-bottom: 5px
+
+		img
+			max-width: 100%
+			max-height: 100%
+			width: auto
+
+		h3
+			grid-row: 1 / 2
+			grid-column: 2 / 7
+			font-weight: 400
+			color: #ebdac3
+			font-size: 20px
+
+			+r(480)
+				grid-row: 2 / 3
+				grid-column: 1 / 7
+				margin-bottom: 5px
+				font-size: 16px
+
+		p
+			grid-column: 2 / 7
+
+			+r(480)
+				grid-row: 3 / 4
+				grid-column: 1 / 7
+
+		&_link
+			display: flex
+			flex-wrap: wrap
+			align-items: flex-end
+			grid-row: 3 / 4
+			grid-column: 2 / 6
+			margin-bottom: 0
+			padding: 5px 0
+
+			+r(992)
+				margin-bottom: 10px
+
+			+r(480)
+				grid-row: 4 / 5
+				grid-column: 1 / 7
+
+			a
+				+last
+				display: flex
+				justify-content: space-between
+				align-items: center
+				margin-right: 10px
+				height: 30px
+				padding: 0 10px
+				box-shadow: 0 0 5px 0 rgba(#000, 1)
+				background-color: #535455
+				border-radius: 3px
+				color: #f1e1c5
+
+				+r(1500)
+					margin-top: 5px
+
+		.button
+			grid-row: 3 / 4
+			grid-column: 5 / 7
+			height: 45px
+
+			+r(992)
+				grid-row: 4 / 5
+				grid-column: 2 / 7
+
+			+r(480)
+				grid-row: 5 / 6
+				grid-column: 1 / 7
+
+
+.footer
+	padding-bottom: 20px
+	z-index: 1
+
+	&__container
+		+between
+
+		+r(576)
+			flex-direction: column
+
+	&__logo
+		position: relative
+		display: block
+		// box-shadow: 0 0 30px 10px rgba(#ff9300, .1)
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 130px
+			height: 30px
+			background-color: #ff9300
+			z-index: -1
+			opacity: .1
+			box-shadow: 0 0 50px 50px #ff9300
+			z-index: 1
+
+
+	p
+		width: 33%
+		font-size: 12px
+		color: #a2a2a2
+
+		&:nth-child(2)
+			text-align: center
+
+		&:nth-child(3)
+			text-align: right
+		
+		+r(576)
+			text-align: center !important
+			width: 100%
+			margin-bottom: 10px
+
+	a
+		
+		color: #ff9300
+
+		&:hover,
+		&:focus
+			color: $accent
+			
+
+
+
+@import "page"

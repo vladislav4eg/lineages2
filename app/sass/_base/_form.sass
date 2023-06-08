@@ -1,0 +1,141 @@
+form
+
+input, textarea
+	width: 100%
+	border: 1px solid #e0e0e0
+	outline: none
+	box-shadow: none
+	// -webkit-appearance: none
+	box-shadow: 0 0 6px rgba(42, 63, 125, 0.34)
+	border-radius: 3px
+	
+	&:focus:required:invalid
+		border-color: red
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: green
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: #292929
+		line-height: 50px
+
+input
+	height: 40px
+	line-height: 40px
+	padding: 0 15px
+
+	&::placeholder
+		line-height: 50px
+		font-size: 16px
+
+	+r(480)
+		height: 35px
+		line-height: 35px
+
+		&::placeholder
+			line-height: 35px
+
+textarea
+	height: 110px
+	resize: none
+	padding: 10px
+
+	+r(578)
+		height: 70px
+
+select
+	background-color: $bg
+	border: none !important
+	color: #ffffff
+	height: 35px
+	outline: none !important
+	padding: 0 10px
+	font-size: 14px
+	display: none
+
+textarea
+	&::placeholder
+		line-height: 1.4
+
+label.error
+	position: absolute
+	bottom: -25px
+	right: 25px
+	left: 25px
+	transition: all .3s
+	animation: error .3s linear 1 forwards
+	color: #fff
+	text-align: center
+	font-weight: 600
+	background-color: red
+	border-radius: 10px
+	z-index: 1
+
+	&::before
+		content: ''
+		position: absolute
+		left: 50%
+		top: -8px
+		margin-left: -2px
+		border-bottom: 4px solid red
+		border-left: 4px solid transparent
+		border-right: 4px solid transparent
+		border-top: 4px solid transparent
+
+.jqselect
+	width: 48%
+
+	.jq-selectbox__select-text
+		+pseudo
+		width: 100%
+		background-color: #343537
+		padding: 10px
+		border-radius: 3px
+		cursor: pointer
+
+		&::before
+			+transition
+			left: auto
+			right: 10px
+			top: 50%
+			width: 8px
+			height: 8px
+			border-bottom: 2px solid #fff
+			border-right: 2px solid #fff
+			transform: translate(0, -50%) rotate(45deg)
+
+		&:hover,
+		&:focus
+			background-color: #4e4f51
+		
+
+	ul
+		position: absolute
+		left: 0
+		top: 95%
+		overflow: auto
+		background-color: #4e4f51
+		width: 100%
+		padding: 10px
+		border-radius: 3px
+	
+	li
+		+last
+		margin-bottom: 10px
+
+		&:hover,
+		&:focus
+			color: #ff9300
+
+	[type=search]
+		display: none
+
+.dropdown
+	&:before
+		transform: translate(0, -50%) rotate(-135deg)

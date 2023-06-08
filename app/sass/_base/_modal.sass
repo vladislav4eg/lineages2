@@ -1,0 +1,182 @@
+.modal
+	position: relative
+	max-width: 320px
+	width: 100%
+	height: auto
+	margin: 20px 0
+	z-index: 1
+	padding-top: 35px
+	background-color: #2b2c2f
+	background-image: url(../img/fon3.png)
+
+	.btn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 200px
+		font-size: 14px
+		height: 40px
+		padding: 0 !important
+	
+	label
+		font-size: 12px
+		color: #f1e1c5
+		height: 30px !important
+
+	&__close
+		position: absolute
+		right: 8px
+		top: 8px
+		display: block
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		border: none
+		cursor: pointer
+		transition: all .6s
+		background: transparent
+
+		&:hover,
+		&:focus
+			outline: none
+			transform: rotate(90deg)
+
+			span
+				background: red
+
+		span
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			background: #fff
+			transition: all .6s
+			border-radius: 4px
+			height: 16px
+			width: 2px
+
+			&:first-child
+				transform: translate(-50%, -50%) rotate(45deg)
+
+			&:last-child
+				transform: translate(-50%, -50%) rotate(-45deg)
+
+	&--form
+		padding: 30px 60px
+		max-width: 720px
+
+		+r(767)
+			max-width: 480px
+			padding: 30px
+		
+		+r(480)
+			padding: 15px
+
+		h3
+			font-size: 22px
+			color: #ffffff
+			font-weight: 600
+			text-align: center
+			margin-bottom: 20px
+
+			+r(480)
+				margin-bottom: 10px
+				font-size: 16px
+
+		span
+			color: #ff9300
+
+		&__input
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			margin-bottom: 20px
+
+			+r(480)
+				margin-bottom: 10px
+
+			div
+				width: 48%
+
+				+r(480)
+					width: 100%
+					margin-bottom: 10px
+					+last
+
+		&__star
+			text-align: center
+			margin-bottom: 20px
+
+			+r(480)
+				margin-bottom: 10px
+
+			p
+				margin-bottom: 10px
+
+			label
+				width: auto !important
+				margin-right: 5px
+				margin-bottom: 0
+
+		&__textarea
+			margin-bottom: 5px
+		
+		&__text
+			margin-bottom: 15px
+
+			+r(480)
+				margin-bottom: 10px
+
+		&__btn
+			display: flex
+			justify-content: center
+
+svg
+	fill: #626262
+	width: 25px
+	
+
+.rating-area
+	overflow: hidden
+	min-width: 210px
+	width: 100%
+	display: flex
+	flex-direction: row-reverse
+	justify-content: center
+	align-items: center
+
+.rating-area:not(:checked) > input
+	width: 1px
+	height: 1px
+	opacity: 0
+
+.rating-area:not(:checked) > label
+	width: 42px
+	padding: 0
+	cursor: pointer
+	color: lightgrey
+	text-shadow: 1px 1px #bbb
+
+.rating-area:not(:checked) > label:before
+	// content: '★'
+
+.rating-area > input:checked ~ label
+	path, svg
+		fill: $accent !important
+
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label
+	path, svg
+		fill: $accent !important
+
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label
+	
+	path, svg
+		fill: $accent !important
+
+.rate-area > label:active
+	position: relative
